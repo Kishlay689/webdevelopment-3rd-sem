@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DOM & Events</title>
+</head>
+<body>
+
+    <!-- <button id="btn">Click Me</button>
+    <p id="output">Hello</p>
+
+    <script>
+        document.getElementById("btn").addEventListener("click", () => {
+            document.getElementById("output").textContent = "Button was clicked!";
+        });
+    </script> -->
+
+
+
+
+
+    <!-- <input type="text" id="nameInput" placeholder ="Enter your name">
+    <p id="greet"></p>
+
+    <script>
+        const input = document.getElementById("nameInput");
+        const greet = document.getElementById("greet");
+
+        input.addEventListener("input", () => {
+            greet.textContent = `hello, ${input.value}!`;
+        });
+    </script> -->
+
+
+<!-- REMOVE ITEMS ON CLICK -->
+ <!-- <ul id="taskList">
+    <li>sample task 1</li>
+    <li>sample task 2</li>
+ </ul>
+
+ <script>
+
+    document.getElementById("taskList").addEventListener("click", (e)=> {
+        if (e.target.tagName === "LI") {
+            e.target.remove();
+        }
+    });
+ </script> -->
+
+ 
+
+<input type="text" id="taskInput" placeholder="Enter a task">
+
+<button id="addBtn">Add</button>
+
+<ul id="taskList"></ul>
+
+<script>
+
+document.getElementById("addBtn").addEventListener("click", () => {
+
+const input = document.getElementById("taskInput");
+
+if (input.value.trim() === "") return;
+
+const li = document.createElement("li");
+
+li.textContent = input.value;
+
+document.getElementById("taskList").appendChild(li);
+
+input.value = "";
+
+});
+
+</script>
+
+
+
+</body>
+</html>

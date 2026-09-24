@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ABC Limited Company</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        padding: 20px;
+      }
+
+      /* Menu Button */
+      .menu a {
+        display: inline-block;
+        padding: 8px 16px;
+        margin-right: 8px;
+        background: #333;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 5px;
+      }
+      .menu a:hover {
+        background: #555;
+      }
+
+      /* Table */
+
+      table{
+         border-collapse: collapse;
+         /* collapse s lines straight ho jati h intead of diff diff boxes. */
+         margin-top: 20px;
+         width: 100%;
+      }
+
+      th, td{
+        border: 1px solid #ccc;
+        padding: 10px;
+        text-align: left;
+      }
+      th{
+        background: #f0f0f0;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>
+      <a href="#">Home</a> | <a href="#">Subject</a> | <a href="#">Payment</a> |
+      <a href="#">Login</a>
+    </h2>
+    <!-- 1. border="1": It adds a border around the table and its cells.
+    2. cellpadding="8": It adds space inside each cell, between the cell's content and its border. -->
+    <table border="1" cellpadding="8">
+      <tr>
+        <th>S.No</th>
+        <th>Subject</th>
+        <th>Price</th>
+        <th>Book</th>
+        <th>Add to Cart</th>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>Physics</td>
+        <td>350</td>
+        <td>1</td>
+        <td>Click me</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Chemistry</td>
+        <td>450</td>
+        <td>2</td>
+        <td>Click me</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>Biology</td>
+        <td>200</td>
+        <td>3</td>
+        <td>Click me</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>Maths</td>
+        <td>300</td>
+        <td>4</td>
+        <td>Click me</td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td>English</td>
+        <td>400</td>
+        <td>5</td>
+        <td>Click me</td>
+      </tr>
+    </table>
+
+    <br />
+
+    <p>
+      <b>Logo</b> ABC Limited Company &nbsp;&nbsp;
+      <a href="https://maps.google.com" target="_blank"
+        >Location (Google Map)</a>
+      
+    </p>
+  </body>
+</html>

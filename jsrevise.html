@@ -1,0 +1,214 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>First javascript program</h2>
+    <button onclick="runCode()">run code</button>
+
+    <p id="result"></p>
+    <script>
+     function runCode(){
+
+        //step 1: store a number in a variable
+        let number1 = 10;
+        let number2 = 5;
+
+        //step 2 : add both numbers
+
+        let sum = number1 + number2;
+
+        //step 3 : show result on the page
+
+        document.getElementById("result").innerText = "SUM IS : " + sum;
+     }
+
+    </script>
+
+    <h2>Data Types</h2>
+<button onclick="runCode()">Run code</button>
+<p id="result2"></p>
+
+<script>
+    function runCode(){
+        // number type
+        let age = 16;
+
+        // string type (text)
+        let name = "kishlay";
+
+        // boolean type (true / false)
+        let isStudent = true;
+
+        // showing the type of each variable using typeof 
+        document.getElementById("result2").innerText = 
+            "age type: " + typeof age + " | " + 
+            "name type: " + typeof name + " | " + 
+            "isStudent type: " + typeof isStudent; 
+    }
+</script>
+
+<h2>if-else statements examples</h2>
+<button onclick="runCode4()">Run code</button>
+
+<p id ="result4"></p>
+
+<script>
+    function runCode4(){
+        let marks = 75;
+
+        // checking marks and deciding grades
+        if(marks >= 90){
+            document.getElementById("result4").innerText = "Grade A";
+        } else if(marks >= 80){
+            document.getElementById("result4").innerText = "Grade B";
+        } else if(marks >= 70){
+            document.getElementById("result4").innerText = "Grade C - need Improvement";
+        } else {
+            document.getElementById("result4").innerText = "Fail";
+        }
+
+    }
+</script>
+<br><br>
+
+<h2>function examples</h2>
+
+<button onclick="runCode5()">Run code</button>
+<p id="result5"></p>
+
+<script>
+    function runCode5(){
+        // This function takes two numbers and returns their sum
+        function addNumbers(x, y){
+            return x + y;
+        } // <-- Fixed: Added this missing closing brace
+
+        // Calling (using) the function
+        let sum = addNumbers(6, 10);
+        
+        // Fixed: Displaying the result on the webpage
+        document.getElementById("result5").innerHTML = sum;
+    } // <-- This closes runCode5
+</script>
+
+
+<h2>Array examples</h2>
+<!-- Added: Button to trigger the array code -->
+<button onclick="runCode6()">Run code</button>
+<p id="result6"></p>
+
+<script>
+    function runCode6(){
+        // Array = list of items
+        let students = ["Aman", "Kishlay", "Rohit", "Ravi", "Sahil"];
+
+        // Get first item (index starts at 0)
+        let first = students[0];
+
+        // How many items in the array before pushing
+        let initialTotal = students.length;
+
+        // Add new item at the end
+        students.push("Ramesh");
+
+        // How many items in the array after pushing
+        let finalTotal = students.length;
+
+        // Added: Displaying the results on the page
+        document.getElementById("result6").innerHTML = 
+            "First Student: " + first + "<br>" +
+            "Initial Total: " + initialTotal + "<br>" +
+            "New Student Added: Ramesh <br>" +
+            "Final Total: " + finalTotal + "<br>" +
+            "Full List: " + students.join(", ");
+    }
+</script>
+
+
+<h2>key-value pair examples</h2>
+<button onclick="runCode7()">Run code</button>
+<p id="result7"></p>
+<script>
+    function runCode7(){
+        // Key-value pair = object
+        let student = {
+            name: "Aman",
+            age: 16,
+            isStudent: true,
+            marks: 80 // Initial value
+        };
+
+        // Update the value using the key
+        student.marks = 90; 
+
+        // Showing the updated marks on the page
+        document.getElementById("result7").innerText = 
+            "Name: " + student.name + " | Updated Marks: " + student.marks;
+    }
+</script>
+
+<h2> text change</h2>
+<button onclick="runCode8()">Run code</button>
+<p id="demoText">This text will change when you click run.</p>
+<script>
+    function runCode8(){
+        // Change the text of the paragraph with id "demoText"
+        document.getElementById("demoText").innerText = "The text has been changed!";
+
+
+    //style color changes the text color
+    document.getElementById("demoText").style.color = "blue";
+    
+    }
+
+
+</script>
+
+
+<h2>Template Literals Example</h2>
+<button onclick=
+"runCode8()">Run Code</button>
+<p id="result8"></p>
+<script>
+function runCode8() {
+let name = "Namiruddin";
+let marks = 100;
+// old way: "Name: " + name + ", Marks: " + marks
+// new way: use backticks ` ` and ${ } to insert variables directly
+let message = `Name: ${name}, Marks: ${marks}`;
+
+// showing result on the page
+document.getElementById("result8").innerText = message;
+}
+</script>
+<h2>Events example</h2>
+<button onclick="setupevent()">setup event(run code)</button>
+<button id="clickmebtn">click Me!</button>
+<script>
+
+    function setupevent(){
+        // setup event listener for the button with id "clickmebtn"
+        document.getElementById("clickmebtn").addEventListener("click", function(){
+            alert("Button was clicked!");
+        });
+    }
+</script>
+ class student{
+    constructor (name,marks){
+        this.name = name;
+        this.marks =marks;
+    }
+    showresult(){
+        return this.name + " scored" + this.marks;
+    }
+ }
+let student1 = new student("Aman", 90);
+document.getElementById("result9").innerText = student1.showresult();
+</script>
+
+</body>
+</html> 
